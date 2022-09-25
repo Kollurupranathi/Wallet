@@ -5,10 +5,12 @@ class WalletPay{
     public float addCash(float cash){
         if(cash>=0){return (amount +=cash);}
         return Float.parseFloat("Amount Cannot be negative");}
+
     public float payCash(float cash){
         if((cash>=0)&& (cash<=amount)){return (amount -=cash);}
         else if ((cash>=0)&& (cash>amount)){return Float.parseFloat("Insufiicient Balance");}
         return Float.parseFloat("Amount Cannot be negative");}
+        
     public float CheckBalance(){return amount; }
 
 }
